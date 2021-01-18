@@ -10,7 +10,6 @@ const ListContacts: React.FC<Props> = ({ contacts }) => {
     const newContacts: IContact[] = contacts.filter((c: IContact) => {
       return c.email !== email;
     });
-    console.log("Contacts after delete: ", newContacts);
     setContacts(newContacts);
     localStorage.setItem("contacts", JSON.stringify(newContacts));
   };
@@ -24,7 +23,6 @@ const ListContacts: React.FC<Props> = ({ contacts }) => {
           <th>Country</th>
         </tr>
         {cs.map((c: IContact) => {
-          console.log("CS: ", cs);
           return (
             <>
               <tr>
